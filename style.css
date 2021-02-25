@@ -34,7 +34,7 @@ nav a {
 }
 
 header {
-    background: url(image.zip/s.png) repeat-x center, url(image.zip/b.jpg);
+    background: url(image.zip/image/s.png) repeat-x center, url(image.zip/image/b.jpg);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -109,7 +109,7 @@ nav a:hover {
     margin-top: 15px;
     height: 200px;
     border-radius: 5px;
-    background: url('image.zip/u.png') no-repeat;
+    background: url('image.zip/image/u.png') no-repeat;
     position: relative;
     box-shadow: 0px 4px 4px #1c1a19;
     margin-bottom: 25px;
@@ -133,7 +133,7 @@ nav a:hover {
     position: absolute;
     right: 5px;
     bottom: 5px;
-    background: url('image.zip/fond_degraderouge.png') repeat-x;
+    background: url('image.zip/image/fond_degraderouge.png') repeat-x;
     border: 1px solid #760001;
     border-radius: 5px;
     font-size: 1.2em;
@@ -223,7 +223,7 @@ article p {
 
 footer {
     display: flex;
-    background: url('image.zip/Separateur.png') repeat-x top, url('image.zip/ombre.png') repeat-x top;
+    background: url('image.zip/image/Separateur.png') repeat-x top, url('image.zip/image/ombre.png') repeat-x top;
     padding-top: 25px;
 }
 
@@ -257,7 +257,7 @@ footer {
 }
 
 #membres_du_groupe ul {
-    list-style-image: url('image.zip/ico_liensexterne.png');
+    list-style-image: url('image.zip/image/ico_liensexterne.png');
     padding-left: 2px;
 }
 
