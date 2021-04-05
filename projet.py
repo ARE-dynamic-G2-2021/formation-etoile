@@ -54,7 +54,6 @@ class StopWatch(Frame):
         if (seconds == tps): #Choisi quand l'étoile s'arrète de se former . 
             Passe = True  
         elif(minutes == 2) : 
-            sw.Stop()
             Arret = True
             
             
