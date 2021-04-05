@@ -1,12 +1,9 @@
-# script animation.py
-#(C) Fabrice Sincère
 from tkinter import * 
 import tkinter as tk
 import random
 import math
 import numpy as np
 import time
-from timeit import default_timer
 
 Passe = True
 Arret = True 
@@ -117,8 +114,8 @@ def pied() :
     if Arret == False and Passe == False:
         Mafenetre.after(1,pied)
         
-def Arreter():
-    """ Arrêt de l'animation """
+def Pause():
+    """" Met en pause l'animation"""
     global Arret
     sw.Stop()
     Arret = True
@@ -136,6 +133,14 @@ def Demarrer():
     Cercle() # un seul appel à cette fonction
     pied() 
         
+def Reprendre():
+    """" Permet de reprendre l'animation"""
+    global Arret 
+    sw.Start()
+    Arret = False
+    Cercle()
+    pied()
+    
 # Création de la fenêtre principale (main window)
 Mafenetre = Tk()
 Mafenetre.title('Animation')
@@ -158,11 +163,15 @@ Boutonmasse2.pack(side = RIGHT,padx=10,pady=10)
 BoutonGo = Button(Mafenetre, text ='Démarrer', command = Demarrer)
 BoutonGo.pack(side = LEFT, padx = 10, pady = 10)
 
-# Création d'un widget Button (bouton Arrêter)
-BoutonArreter = Button(Mafenetre, text ='Arrêter', command = Arreter)
+# Création d'un widget Button (bouton Pause)
+BoutonArreter = Button(Mafenetre, text ='Pause', command = Pause)
 BoutonArreter.pack(side = LEFT, padx = 5, pady = 5)
+
+# Création d'un widget Button (bouton Reprendre)
+Button(Mafenetre, text='Reprendre', command=Reprendre).pack(side=LEFT)
 
 # Création d'un widget Button (bouton Quitter)
 BoutonQuitter = Button(Mafenetre, text ='Quitter', command = Mafenetre.destroy)
 BoutonQuitter.pack(side = LEFT, padx = 5, pady = 5)
 Mafenetre.mainloop()
+
