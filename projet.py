@@ -55,12 +55,9 @@ class StopWatch(Frame):
         self.timestr.set('%02d:%02d:%02d' % (minutes, seconds, hseconds))
         c+=1
         if (seconds == tps): #Choisi quand l'étoile s'arrète de se former . 
-             #Arret du chronomètre
-            #Arreter()
-            Passe = True 
-            # Reset du chronomètre
-            #sw.Reset() 
+            Passe = True  
         elif(minutes == 2) : 
+            sw.Stop()
             Arret = True
             
             
@@ -133,12 +130,11 @@ def Demarrer():
     if (c>1):
         sw.Reset()
         c = 0 
-    if Arret == True and Passe == True:
-        sw.Start()
-        Arret = False
-        Passe = False
-        Cercle() # un seul appel à cette fonction
-        pied() 
+    sw.Start()
+    Arret = False
+    Passe = False
+    Cercle() # un seul appel à cette fonction
+    pied() 
         
 # Création de la fenêtre principale (main window)
 Mafenetre = Tk()
