@@ -105,7 +105,6 @@ def Temp() :
     global ovale,Pause
     sw.Stop()
     Pause = True 
-    #if Arret == True: 
     if float(temp.get()) >= 1649 and float(temp.get()) <= 3316 : 
         Canevas.itemconfigure(ovale,outline="red",fill = "red")
     elif float(temp.get()) > 3316 and float(temp.get()) <= 4704:
