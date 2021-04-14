@@ -97,14 +97,13 @@ def Cercle():
         #appel de la fonction Cercle() après une pause de 1 millisecondes
         Mafenetre.after(1,Cercle)
     elif Arret == True and Pause == False: 
-        ovale = Canevas.create_oval(X0-Rayon-2,Y0-Rayon-2,X0+Rayon+2,Y0+Rayon+2,outline = "white",fill="white")
         Temp() 
         Mafenetre.after(1,Cercle)
 
 def Temp() :  
     global ovale,Pause
     sw.Stop()
-    Pause = True 
+    ovale = Canevas.create_oval(X0-Rayon-2,Y0-Rayon-2,X0+Rayon+2,Y0+Rayon+2,outline = "white",fill="white")
     if float(temp.get()) >= 1649 and float(temp.get()) <= 3316 : 
         Canevas.itemconfigure(ovale,outline="red",fill = "red")
     elif float(temp.get()) > 3316 and float(temp.get()) <= 4704:
