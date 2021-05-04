@@ -171,8 +171,6 @@ Mafenetre = Tk()
 Mafenetre.title('Animation')
 
 # Création d'un widget Canvas
-Largeur = 700
-Hauteur = 700
 Canevas = Canvas(Mafenetre, width = Largeur, height =Hauteur, bg ='black')
 Canevas.pack(side = LEFT, padx =5, pady =5)
 sw = StopWatch(Mafenetre)
